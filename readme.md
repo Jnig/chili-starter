@@ -1,4 +1,4 @@
-# Chilli starter
+# Chili starter
 
 ## Start dev environment
 ```

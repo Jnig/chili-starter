@@ -1,9 +1,12 @@
-# start
+# Chilli starter
+
+## Start dev environment
 ```
 yarn install
 yarn run dev
 ```
-## modify schema
+
+## Modify schema
 - Modify schema in user/schema.ts
 ```
 yarn run gen:routes

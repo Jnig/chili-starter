@@ -1,0 +1,170 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Test swagger",
+    "description": "Testing the Fastify swagger API",
+    "version": "0.1.0"
+  },
+  "definitions": {},
+  "paths": {
+    "/api/users": {
+      "post": {
+        "operationId": "create",
+        "tags": [
+          "UserController"
+        ],
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "additionalProperties": false,
+              "properties": {
+                "email": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "email",
+                "name"
+              ],
+              "type": "object"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Default Response",
+            "schema": {
+              "additionalProperties": false,
+              "properties": {
+                "email": {
+                  "type": "string"
+                },
+                "id": {
+                  "type": "number"
+                },
+                "name": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "email",
+                "id",
+                "name"
+              ],
+              "type": "object"
+            }
+          }
+        }
+      },
+      "get": {
+        "operationId": "list",
+        "tags": [
+          "UserController"
+        ],
+        "responses": {
+          "200": {
+            "description": "Default Response",
+            "schema": {
+              "type": "array",
+              "items": {
+                "additionalProperties": false,
+                "properties": {
+                  "email": {
+                    "type": "string"
+                  },
+                  "id": {
+                    "type": "number"
+                  },
+                  "name": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "email",
+                  "id",
+                  "name"
+                ],
+                "type": "object"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/users/{id}": {
+      "post": {
+        "operationId": "update",
+        "tags": [
+          "UserController"
+        ],
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "additionalProperties": false,
+              "properties": {
+                "email": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                }
+              },
+              "type": "object"
+            }
+          },
+          {
+            "type": "number",
+            "required": true,
+            "in": "path",
+            "name": "id"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Default Response",
+            "schema": {
+              "additionalProperties": false,
+              "properties": {
+                "email": {
+                  "type": "string"
+                },
+                "id": {
+                  "type": "number"
+                },
+                "name": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "email",
+                "id",
+                "name"
+              ],
+              "type": "object"
+            }
+          }
+        }
+      }
+    }
+  },
+  "schemes": [
+    "http"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "externalDocs": {
+    "url": "https://swagger.io",
+    "description": "Find more info here"
+  }
+}

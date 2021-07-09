@@ -1,0 +1,30 @@
+{
+  "name": "chili-starter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "./build.js -w -r",
+    "gen:client": "chili-api-cli create-api -s ./openapi.json -f ./gui/api.ts",
+    "gen:routes": "chili-api-cli create-routes"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "estrella": "^1.4.1",
+    "fastify": "3.18.1",
+    "fastify-swagger": "^4.8.2",
+    "lodash": "^4.17.21",
+    "pino-pretty": "^5.1.1",
+    "source-map-support": "^0.5.19",
+    "tsconfig-paths": "^3.10.1"
+  },
+  "devDependencies": {
+    "@jnig/chili-api-cli": "^0.0.23",
+    "@types/lodash": "^4.14.171",
+    "@types/node": "^16.3.0",
+    "prettier": "^2.3.2",
+    "typescript": "^4.3.5"
+  }
+}
